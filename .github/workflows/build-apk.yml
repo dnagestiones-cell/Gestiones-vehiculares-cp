@@ -24,7 +24,7 @@ jobs:
           java-version: '17'
 
       - name: Dar permisos a Gradle
-        run: chmod +x GestionesAPK/gradl
+        run: chmod +x GestionesAPK/gradlew
       - name: Compilar APK
         working-directory: GestionesAPK
         run: ./gradlew assembleDebug
