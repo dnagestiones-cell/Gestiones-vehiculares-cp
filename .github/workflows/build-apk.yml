@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Descomprimir proyecto
-        run: unzip -q GestionesVehiculares_APK_Punto4_GananciaGestiones.zip
+        run: unzip -q GestionesVehiculares_APK_Punto4_CORREGIDO.zip
 
       - name: Configurar Java
         uses: actions/setup-java@v4
