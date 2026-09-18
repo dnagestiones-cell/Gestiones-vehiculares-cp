@@ -25,6 +25,11 @@ jobs:
 
       - name: Dar permisos a Gradle
         run: chmod +x GestionesAPK/gradlew
+        - name: preparar clave de firma
+        run: echo "${{ secrets.ANDROID_KEYSTORE }}" | base64 -d > keystore.jks
+        workin-directory: GestionesAPK
+        env: 
+        ANDROID_KEYSTORE_PASSWORD: $ {{ secrets.ANDROID_KEYSTORE_PASSWORD }}
       - name: Compilar APK
         working-directory: GestionesAPK
         run: ./gradlew assembleDebug
